@@ -1,19 +1,19 @@
 ## Twitter clone Hosting link
 
 ## 🔗 Links
-(https://twitter-clone-git-main-bhanuprasadgantela14.vercel.app/)
+(https://twitter-clone-git-main-udayprasadgantela07.vercel.app/)
 
-(https://twitter-clone-bhanuprasadgantela14.vercel.app/)
+(https://twitter-clone-udayprasadgantela07.vercel.app/)
 
 
-## Bhanu prasad G
+##   Uday Prasad G
 
 I'm a full-stack developer with over two years of experience. I'm passionate about replicating and creating visually appealing web designs, and I thrive on building feature-rich websites using JavaScript. I've honed my skills through internships, Hackathons, and college projects, and I'm proficient in languages like C/C++, Python, and JavaScript.
 
 
 ## 🔗 Links
 
-(https://www.linkedin.com/in/bhanu-prasad-81b534221/)
+(https://www.linkedin.com/in/uday-prasad-81b534221/)
 
 
 # Twitter Clone
