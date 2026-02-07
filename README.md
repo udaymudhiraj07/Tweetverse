@@ -1,9 +1,9 @@
 ## Twitter clone Hosting link
 
 ## 🔗 Links
-(https://twitter-clone-git-main-udayprasadgantela07.vercel.app/)
+(https://twitter-clone-git-main-udaymudhiraja07.vercel.app/)
 
-(https://twitter-clone-udayprasadgantela07.vercel.app/)
+(https://twitter-clone-udaymudhiraj07.vercel.app/)
 
 
 ##   Uday Prasad G
@@ -13,8 +13,7 @@ I'm a full-stack developer with over two years of experience. I'm passionate abo
 
 ## 🔗 Links
 
-(https://www.linkedin.com/in/uday-prasad-81b534221/)
-
+(https://www.linkedin.com/in/uday-prasad-7493b928a/)
 
 # Twitter Clone
 
