@@ -1,0 +1,365 @@
+/* Tailwind CSS Base Styles */
+@tailwind base;
+
+/* Tailwind CSS Component Styles */
+@tailwind components;
+
+/* Tailwind CSS Utility Classes */
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap');
+
+/* Set Root Styles */
+:root {
+  --bg-color: #ffffff; /* White background */
+  --text-color: #1c1e21; /* Dark text */
+  @apply h-full bg-white; /* Set the background to white */
+}
+
+/* Body Styles */
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  color: var(--text-color);
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Main Container Styles */
+main {
+  height: 100vh;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #e1e8ed; /* Light gray border */
+}
+
+/* Main Content Styles */
+.main {
+  width: 50%;
+  height: 100%;
+  overflow-x: scroll;
+  box-shadow: 0 0 5px #e1e8ed; /* Light gray shadow */
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Follow Styles */
+.follow {
+  width: 30%;
+  height: 100%;
+  border-left: 1px solid #e1e8ed; /* Light gray border */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .sidebar {
+    width: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .follow {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    width: 95%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .sidebar {
+    position: fixed;
+    border: none;
+    border-top: 1px solid #e1e8ed; /* Light gray border */
+    width: 100vw;
+    bottom: 0;
+    z-index: 999999;
+  }
+
+  .sidenav {
+    z-index: 999999;
+  }
+}
+
+/* Sidebar Body Styles */
+.sidebar-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+
+/* Logo Styles */
+.logo {
+  height: 50px;
+  transform: translateX(-18px);
+}
+
+/* Sidebar Item Styles */
+.sidenav-items-a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 2vh 0;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 25px 10px 10px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.sidenav-items-a:hover {
+  background-color: #e1e8ed; /* Light gray background on hover */
+  color: #1DA1F2;
+}
+
+/* Sidebar Text Styles */
+.sidenav-text {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Sidebar Description Styles */
+.sidenav-desc {
+  position: absolute;
+  transform: translateY(45px) translateX(-5px);
+  color: var(--text-color);
+  background-color: rgba(20, 50, 80, 0.9);
+  padding: 5px;
+  display: none;
+  font-size: 12px;
+}
+
+/* Post Link Styles */
+.post-a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Post Button Styles */
+.post-button {
+  background-color: #1DA1F2;
+  width: 70%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+.post-button:hover {
+  background-color: #1A91DA;
+}
+
+/* Post Icon Styles */
+.post-icon {
+  display: none;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 1200px) {
+  .sidenav-text {
+    display: none;
+  }
+
+  .sidenav-items-a {
+    padding: 10px;
+  }
+
+  .sidebar-body {
+    padding-right: 10px;
+  }
+
+  .sidenav-items-a:hover .sidenav-desc {
+    display: block;
+  }
+
+  .post-button {
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .post-icon {
+    display: flex;
+    align-self: center;
+    text-align: center;
+  }
+
+  .post-text {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    height: fit-content;
+  }
+
+  .sidebar-body {
+    background-color: rgba(225, 232, 237, 0.95); /* Light gray background with transparency */
+    backdrop-filter: blur(10px);
+  }
+
+  .sidenav {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .sidenav-items-a {
+    margin: .5vh 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .post-button {
+    position: absolute;
+    bottom: 10vh;
+    right: 2.5vw;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    width: fit-content;
+  }
+}
+
+/* Followbar Styles */
+.followbar {
+  margin-top: 2vh;
+}
+
+/* Follow Box Styles */
+.follow-box {
+  width: 80%;
+  margin: auto;
+  background-color: #e1e8ed; /* Light gray background */
+  border-radius: 15px;
+  padding: 15px;
+}
+
+/* Follow Head Styles */
+.follow-head {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Follow Users Styles */
+.follow-users {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5vh;
+}
+
+/* Main Container Styles */
+.home {
+  margin-top: 2vh;
+  position: relative;
+}
+
+/* Home Header Styles */
+.home-header {
+  border-bottom: 1px solid #e1e8ed; /* Light gray border */
+  padding-bottom: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Home Head Styles */
+.home-head {
+  margin-left: 2vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Home Icon Styles */
+.home-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+/* Home Logo Styles */
+.home-logo {
+  height: 50px;
+  text-align: center;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 500px) {
+  .home-head {
+    display: none;
+  }
+
+  .arrow-back {
+    display: none;
+  }
+
+  .home-icon {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-header {
+    padding-bottom: 5px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e1e8ed; /* Light gray border */
+  }
+
+  .home {
+    margin: 0;
+  }
+}
+
+/* Post Styles */
+.posts {
+  background-color: #ffffff; /* White background for posts */
+  box-shadow: 0 0 5px #e1e8ed; /* Light gray shadow */
+  width: 95%;
+  margin: 1vh auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
